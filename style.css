@@ -1,44 +1,46 @@
-*, *::after, *::before {
+* {
     box-sizing: border-box;
 }
 
-:root {
-   --box-size: 100px;
-   --mark-size: calc(var(--box-size) * .9);
-}
-
 body {
-    margin: 0;
+    background-color: rgba(200, 235, 247, 0.927);
 }
 
 h1 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 2%;
-    padding-top: 1em;
-    margin-bottom: 0%;
+    font-family: 'Fuzzy Bubbles', cursive;    /* margin-top: 2%; */
+    padding: 1em;
+    text-decoration: underline;
+    font-size: 40pt;
 }
 
 .board {
-    width: 100vw;
-    height: 100vh;
+
     display: grid;
     justify-content: center;
     align-content: center;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, auto);
+    margin: 10%;
+    border: 2vh;
+   column-gap: 0px;
 }
 
 .box {
-    width: var(--box-size);
-    height: var(--box-size);
-    border: 1px solid rgb(87, 86, 86);
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(87, 86, 86);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     cursor: pointer;
+    text-align: center;
+    font-size: 40pt;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px rgba(135, 152, 169, 0.53);
+
 }
 
 .box:first-child,
@@ -61,45 +63,30 @@ h1 {
     border-bottom: none;
 }
 
-.box.x,
-.box.circle {
-    cursor: not-allowed;
+.box:hover {
+    background-color: rgb(228, 226, 226);
 }
 
-.box.x::before,
-.box.x::after {
-    content: '';
-    position: absolute;
-    width: calc(var(--mark-size) * .15);
-    height: var(--mark-size);
-    background-color: black;
+div.button {
+text-align: center;
+padding-top: 20px;
+
+}
+#restartButton {
+ background-color: rgb(160, 215, 216);
+border: none;
+color: black;
+padding: 25px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-weight: bold;
+font-size: 15px;
+letter-spacing: 0.2em;
+border:2px solid rgb(38, 49, 53);
+border-radius: 12px;
 }
 
-.box.x::before {
-    transform: rotate(45deg);
-}
-
-.box.x::after {
-    transform: rotate(-45deg);
-}
-
-.box.circle::before,
-.box.circle::after {
-    content: '';
-    position: absolute;
-    width: var(--mark-size);
-    height: var(--mark-size);
-    background-color: black;
-    border-radius: 50%;
-}
-
-.box.circle::before {
-    height: var(--mark-size);
-    width: var(--mark-size);
-    background-color: black;
-}
-.box.circle::after {
-    width: calc(var(--mark-size) * .7);
-    height: calc(var(--mark-size) * .7);
-    background-color: white;
+#restartButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

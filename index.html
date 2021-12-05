@@ -5,26 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Tic Tac Toe</title>
 </head>
 
 <body>
     <h1>Tic-Tac-Toe</h1>
+
     <div class="board" id="board">
-        <div class="box x" data-box></div>
-        <div class="box circle" data-box></div>
-        <div class="box" data-box></div>
-        <div class="box" data-box></div>
-        <div class="box" data-box></div>
-        <div class="box" data-box></div>
-        <div class="box" data-box></div>
-        <div class="box" data-box></div>
-        <div class="box" data-box></div>
+
+        <div class="box" id="index-0" data-box>X</div>
+        <div class="box" id="index-1" data-box>O</div>
+        <div class="box" id="index-2" data-box></div>
+        <div class="box" id="index-3" data-box></div>
+        <div class="box" id="index-4" data-box></div>
+        <div class="box" id="index-5" data-box></div>
+        <div class="box" id="index-6" data-box></div>
+        <div class="box" id="index-7" data-box></div>
+        <div class="box" id="index-8" data-box></div>
     </div>
     <div class="winning-message" id="winningMessage">
         <div class="data-winning-message-text"></div>
-        <button id="restartButton">Restart</button>
+        <div class="button">
+            <button id="restartButton">Restart</button>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
